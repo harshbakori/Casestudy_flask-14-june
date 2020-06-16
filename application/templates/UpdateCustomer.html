@@ -1,0 +1,66 @@
+{% extend "layout.html" %}
+{% block content %}
+        <div class='center'>
+            <br>
+            <br>
+            <br>
+            <span class='size-xl'>Update Customer</span>
+            <br>
+            <br>
+            <form>
+                <center>
+                <table>
+                    <tr>
+                        <td>Customer SSN Id</td>
+                        <td>80000001</td>
+                    </tr>
+                    <tr>
+                        <td>Customer Id</td>
+                        <td>125454545</td>
+                    </tr>
+                    <tr>
+                        <td>Old Customer Name</td>
+                        <td>xyzabc</td>
+                    </tr>
+                    <tr>
+                        <td>New Customer Name<span class='red'>*</span></td>
+                        <td><input type="text" Name="Name"></td>
+                    </tr>
+                    <tr>
+                        <td>Old Address</td>
+                        <td>Mumbai</td>
+                    </tr>
+                    <tr>
+                        <td>New Address<span class='red'>*</span></td>
+                        <td><input type="text" name="NewAddr"></td>
+                    </tr>
+                    <tr>
+                        <td>Old Age</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>New Age<span class='red'>*</span></td>
+                        <td><input type="text" Name="Age"></td>
+                    </tr>
+                    
+                </table>
+                <span class='red'>(*)Fields are mandatory</span>
+                <br>
+                <br>
+                <button type="Submit" class="yellowTxt blackButton">Update</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                </center>
+            </form>
+        </div>
+{% endblock %}
