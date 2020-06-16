@@ -1,0 +1,58 @@
+{% extend "layout.html" %}
+{% block content %}
+        <div class='center'>
+            <br>
+            <br>
+            <br>
+            <span class='size-xl'>Create Account</span>
+            <br>
+            <br>
+            <form>
+                <center>
+                <table>
+                    <tr>
+                        <td>Customer Id<span class='red'>*</span></td>
+                        <td><input type="text" Name="CustID"></td>
+                    </tr>
+                    <tr>
+                        <td>Account type<span class='red'>*</span></td>
+                        <td>
+                            <select name="AccType" id="AccType">
+                                <option value="select">select</option>
+                                <option value="current">Current Account</option>
+                                <option value="savings">Savings Account</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Deposit Amount<span class='red'>*</span></td>
+                        <td><input type="text" Name="Amount"></td>
+                    </tr>
+                </table>
+                <span class='red'>(*)Fields are mandatory</span>
+                <br>
+                <br>
+                <button type="Submit" class="yellowTxt blackButton">Submit</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                </center>
+            </form>
+        </div>
+{% endblock %}
