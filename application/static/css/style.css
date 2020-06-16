@@ -1,0 +1,67 @@
+.yellowTxt{
+    color: yellow;
+}
+.whiteTxt{
+    color: white;
+}
+.blackRegion{
+    background-color: black;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    left:0;
+    right:0;
+}
+.blackButton{
+    background-color: black;
+    padding:10px 40px;
+}
+.yellowRegion{
+    background-color: yellow;
+    color: black;
+    padding: 10pt;
+}
+a{
+    padding-left: 10pt;
+    color:inherit;
+    text-decoration: none;
+}
+.size-xxl{
+    font-size: xx-large;
+}
+.size-xl{
+    font-size: x-large;
+}
+.size-l{
+    font-size: large;
+}
+.yellowBorder{
+    border-top: 2pt solid yellow;
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+}
+.sparse a{
+    padding-left: 18%;
+}
+.sparse{
+    padding-bottom: 1%;
+}
+.center{
+    text-align: center;
+    align-content: center;
+}
+.red{
+    color: red;
+}
+td {
+    border: 0px solid black;
+    padding: 10px;
+}
+body{
+    margin:0
+}
+#grad {
+    background-image: linear-gradient(rgb(218, 218, 218), white);
+}
