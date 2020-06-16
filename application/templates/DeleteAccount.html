@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>FedChoice Bank</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body id="grad">
+        <div class='blackRegion'>
+            <span class="yellowTxt size-xxl">FedChoice</span> <span class="whiteTxt size-xxl">Bank</span>
+            <br>
+            <br>
+            <nav class='yellowRegion size-l'>
+                <a href="{{ url_for('')}}" class="{% if home %}active{% endif %}">Home</a>
+                <a href="{{ url_for('')}}" class="{% if custMng %}active{% endif %}">Customer Management &#9660; </a>
+                <a href="{{ url_for('')}}" class="{% if accMng %}active{% endif %}">Account Management &#9660;</a>
+                <a href="{{ url_for('')}}" class="{% if stDet %}active{% endif %}">Status Details &#9660;</a>
+                <a href="{{ url_for('')}}" class="{% if accOps %}active{% endif %}">Account Operations &#9660;</a>
+                <a href="{{ url_for('')}}">Logout</a>
+            </nav>
+        </div>
+        {% block content %}
+        <div class='center'>
+            <br>
+            <br>
+            <br>
+            <span class='size-xl'>Delete Account</span>
+            <br>
+            <br>
+            <form>
+                <center>
+                <table>
+                    <tr>
+                        <td>Account ID</td>
+                        <td><input type="text" Name="AccID"></td>
+                    </tr>
+                    <tr>
+                        <td>Account Type<span class='red'>*</span></td>
+                        <td><input type="text" Name="AccType" value="123456789" disabled></td>
+                    </tr>
+                </table>
+                <span class='red'>(*)Fields are mandatory</span>
+                <br>
+                <br>
+                <button type="Submit" class="yellowTxt blackButton">Delete Account</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                </center>
+            </form>
+        </div>
+        {% endblock %}
+
+        <div class='sparse blackRegion yellowBorder yellowTxt size-xl'>
+            <a href="{{ url_for('')}}">About Us</a>
+            <a href="{{ url_for('')}}">Services</a>
+            <a href="{{ url_for('')}}">Contact Us</a>
+            <br>
+        </div>
+    </body>
+</html>        
