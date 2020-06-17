@@ -1,0 +1,82 @@
+{% extend "layout.html" %}
+{% block content %}
+
+        <script type="text/javascript">
+            function Check() {
+                if (document.getElementById('Transactions').checked) {
+                    document.getElementById('choice1').style.visibility = 'visible';
+                } else {
+                    document.getElementById('choice1').style.visibility = 'hidden';
+                }
+                if (document.getElementById('Dates').checked) {
+                    document.getElementById('choice2').style.visibility = 'visible';
+                } else {
+                    document.getElementById('choice2').style.visibility = 'hidden';
+                }
+            }
+        </script>
+
+        <div class='center'>
+            <br>
+            <br>
+            <br>
+            <span class='size-xl'>Account Statement</span>
+            <br>
+            <br>
+            <form>
+                <center>
+                <table>
+                    <tr>
+                        <td>Account Id</td>
+                        <td><input type="text" Name="AccountID"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" onclick="javascript:Check();" id="Transactions" name="stmt" value="Transactions">
+                        </td>
+                        <td>
+                            Last number of Transactions
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" onclick="javascript:Check();" id="Dates" name="stmt" value="Dates">
+                        </td>
+                        <td>
+                            Start-End Dates
+                        </td>
+                        
+                    </tr>
+                    <tr id='choice1' style="visibility:hidden">
+                        <td>Number of Transactions</td>
+                        <td><input type="text" Name="Transactions"></td>
+                    </tr>
+                    <tr id='choice2' style="visibility:hidden">
+                        <td>Start-End dates</td>
+                        <td><input type="text" Name="StartDate" placeholder="Start Date"></td>
+                        <td><input type="text" Name="EndDate" placeholder="End Date"></td>
+                    </tr>
+                </table>
+                <span class='red'>(*)Fields are mandatory</span>
+                <br>
+                <br>
+                <button type="Submit" class="yellowTxt blackButton">Submit</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                </center>
+            </form>
+        </div>
+{% endblock %}
