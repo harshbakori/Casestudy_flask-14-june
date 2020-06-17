@@ -1,4 +1,4 @@
-{% extend "layout.html" %}
+{% extends "layout.html" %}
 {% block content %}
         <div class='center'>
             <br>
@@ -11,18 +11,24 @@
                 <center>
                 <table>
                     <tr>
-                        <td>Account ID</td>
-                        <td><input type="text" Name="AccID"></td>
+                        <td>{{ form.Account_ID.label }}<span class='red'>*</span></td>
+                        <td>{{ form.Account_ID }}
+                            {% for error in form.Account_ID.errors %}
+                             <span class="error-message">{{ error }}</span>
+                            {% endfor %}</td>
                     </tr>
                     <tr>
-                        <td>Account Type<span class='red'>*</span></td>
-                        <td><input type="text" Name="AccType" value="123456789" disabled></td>
+                        <td>{{ form.ACC_Type.label }}<span class='red'>*</span></td>
+                        <td>{{ form.ACC_Type }}
+                            {% for error in form.ACC_Type.errors %}
+                             <span class="error-message">{{ error }}</span>
+                            {% endfor %}</td>
                     </tr>
                 </table>
                 <span class='red'>(*)Fields are mandatory</span>
                 <br>
                 <br>
-                <button type="Submit" class="yellowTxt blackButton">Delete Account</button>
+                {{ form.submit(class_="yellowTxt blackButton") }}
                 <br>
                 <br>
                 <br>

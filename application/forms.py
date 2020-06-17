@@ -15,3 +15,11 @@ class RegisterForm(FlaskForm):
     State = SelectField("State",validators=[DataRequired()],choices=state_pairs)
     City = SelectField("State",validators=[DataRequired()],choices=city_pairs)
     submit = SubmitField("Submit")
+    
+class DeleteAccount(FlaskForm):
+    
+    Account_ID = StringField("Account Id", validators=[DataRequired(),Length(min=2,max=55)])
+    ACC_Type = StringField("Account Type", validators=[DataRequired(),Length(min=2,max=55)])
+    submit = SubmitField("Delete Account")
+    
+    
