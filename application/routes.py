@@ -7,5 +7,4 @@ from application.forms import RegisterForm
 @app.route("/home")
 def index():
     form = RegisterForm()
-    
     return render_template("CreateAccount.html",form=form,home=True)
