@@ -1,45 +1,63 @@
-{% extend "layout.html" %}
+{% extends "layout.html" %}
 {% block content %}
         <div class='center'>
             <br>
             <br>
             <br>
-            <span class='size-xl'>Create Account</span>
+            <span class='size-xl'>Create Customer Screen</span>
             <br>
             <br>
             <form>
-                <center>
+                <center> 
                 <table>
                     <tr>
-                        <td>Customer Id<span class='red'>*</span></td>
-                        <td><input type="text" Name="CustID"></td>
+                        <td>{{ form.SSN_ID.label }}<span class='red'>*</span></td>
+                        <td>{{ form.SSN_ID }}
+                            {% for error in form.SSN_ID.errors %}
+                             <span class="error-message">{{ error }}</span>
+                            {% endfor %}</td>
                     </tr>
                     <tr>
-                        <td>Account type<span class='red'>*</span></td>
-                        <td>
-                            <select name="AccType" id="AccType">
-                                <option value="select">select</option>
-                                <option value="current">Current Account</option>
-                                <option value="savings">Savings Account</option>
-                            </select>
-                        </td>
+                        <td>{{ form.Cust_Name.label }}<span class='red'>*</span></td>
+                        <td>{{ form.Cust_Name }}
+                            {% for error in form.Cust_Name.errors %}
+                             <span class="error-message">{{ error }}</span>
+                            {% endfor %}</td>
                     </tr>
                     <tr>
-                        <td>Deposit Amount<span class='red'>*</span></td>
-                        <td><input type="text" Name="Amount"></td>
+                        <td>{{ form.Cust_Age.label }}<span class='red'>*</span></td>
+                        <td>{{ form.Cust_Age }}
+                            {% for error in form.Cust_Age.errors %}
+                             <span class="error-message">{{ error }}</span>
+                            {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.address.label }}<span class='red'>*</span></td>
+                        <td>{{ form.address }}
+                            {% for error in form.address.errors %}
+                             <span class="error-message">{{ error }}</span>
+                            {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.State.label }}<span class='red'>*</span></td>
+                        <td>{{ form.State }}
+                            {% for error in form.State.errors %}
+                             <span class="error-message">{{ error }}</span>
+                            {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ form.City.label }}<span class='red'>*</span></td>
+                        <td>{{ form.City }}
+                            {% for error in form.City.errors %}
+                             <span class="error-message">{{ error }}</span>
+                            {% endfor %}</td>
                     </tr>
                 </table>
                 <span class='red'>(*)Fields are mandatory</span>
                 <br>
                 <br>
-                <button type="Submit" class="yellowTxt blackButton">Submit</button>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+                {{ form.submit(class_="yellowTxt blackButton") }}
+                <button type="Reset" class="yellowTxt blackButton">Reset</button>
                 <br>
                 <br>
                 <br>

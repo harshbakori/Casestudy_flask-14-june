@@ -8,4 +8,4 @@ from application.forms import RegisterForm
 def index():
     form = RegisterForm()
     
-    return render_template("signup.html",form=form,home=True)
+    return render_template("CreateAccount.html",form=form,home=True)
