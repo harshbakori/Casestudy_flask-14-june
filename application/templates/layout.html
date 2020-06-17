@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>FedChoice Bank</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="static\css\style.css">
     </head>
     <body id="grad">
         <div class='blackRegion'>
@@ -9,12 +9,12 @@
             <br>
             <br>
             <nav class='yellowRegion size-l'>
-                <a href="{{ url_for('')}}" class="{% if home %}active{% endif %}">Home</a>
-                <a href="{{ url_for('')}}" class="{% if custMng %}active{% endif %}">Customer Management &#9660; </a>
-                <a href="{{ url_for('')}}" class="{% if accMng %}active{% endif %}">Account Management &#9660;</a>
-                <a href="{{ url_for('')}}" class="{% if stDet %}active{% endif %}">Status Details &#9660;</a>
-                <a href="{{ url_for('')}}" class="{% if accOps %}active{% endif %}">Account Operations &#9660;</a>
-                <a href="{{ url_for('')}}">Logout</a>
+                <a href="{{ url_for('index') }}" class="{% if home %}active{% endif %}">Home</a>
+                <a href="{{ url_for('index') }}" class="{% if custMng %}active{% endif %}">Customer Management &#9660; </a>
+                <a href="{{ url_for('index') }}" class="{% if accMng %}active{% endif %}">Account Management &#9660;</a>
+                <a href="{{ url_for('index') }}" class="{% if stDet %}active{% endif %}">Status Details &#9660;</a>
+                <a href="{{ url_for('index') }}" class="{% if accOps %}active{% endif %}">Account Operations &#9660;</a>
+                <a href="{{ url_for('index') }}">Logout</a>
             </nav>
         </div>
         {% block content %}
@@ -22,9 +22,9 @@
         {% endblock %}
 
         <div class='sparse blackRegion yellowBorder yellowTxt size-xl'>
-            <a href="{{ url_for('')}}">About Us</a>
-            <a href="{{ url_for('')}}">Services</a>
-            <a href="{{ url_for('')}}">Contact Us</a>
+            <a href="{{ url_for('index') }}">About Us</a>
+            <a href="{{ url_for('index') }}">Services</a>
+            <a href="{{ url_for('index') }}">Contact Us</a>
             <br>
         </div>
     </body>
