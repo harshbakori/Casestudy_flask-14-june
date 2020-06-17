@@ -1,0 +1,67 @@
+{% extend "layout.html" %}
+{% block content %}
+        <div class='center'>
+            <br>
+            <br>
+            <br>
+            <span class='size-xl'>Transfer Money</span>
+            <br>
+            <br>
+            <form>
+                <center>
+                <table>
+                    <tr>
+                        <td>Customer Id</td>
+                        <td><input type="text" Name="CustID" value="123456789" disabled></td>
+                    </tr>
+                    <tr>
+                        <td>Source Account type</td>
+                        <td>
+                            <select name="AccType" id="AccType">
+                                <option value="select">select</option>
+                                <option value="current">Current Account</option>
+                                <option value="savings">Savings Account</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Target Account type</td>
+                        <td>
+                            <select name="AccType" id="AccType">
+                                <option value="select">select</option>
+                                <option value="current">Current Account</option>
+                                <option value="savings">Savings Account</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Transfer Amount</td>
+                        <td><input type="text" Name="Amount"></td>
+                    </tr>
+                </table>
+                <span class='red'>(*)Fields are mandatory</span>
+                <br>
+                <br>
+                <button type="Submit" class="yellowTxt blackButton">Transfer</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                </center>
+            </form>
+        </div>
+{% endblock %}
