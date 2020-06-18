@@ -22,4 +22,3 @@ class DeleteAccount(FlaskForm):
     ACC_Type = StringField("Account Type", validators=[DataRequired(),Length(min=2,max=55)])
     submit = SubmitField("Delete Account")
     
-    
