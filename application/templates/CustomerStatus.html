@@ -1,0 +1,48 @@
+{% extend "layout.html" %}
+{% block content %}
+
+        <div class='center'>
+        <center>
+            <br>
+            <br>
+            <br>
+            <span class='size-xl'>Customer Status</span>
+            <br>
+            <br>
+            <table border="2px gray solid" class="table">
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer SSN ID</th>
+                    <th>Status</th>
+                    <th>Message</th>
+                    <th>Last Updated</th>
+                    <th>Operations</th>
+                    <th>View Profile</th>
+                </tr>
+                {% for data in courseData %}
+                <tr>
+                    <td>{{data.CustID}}</td>
+                    <td>{{data.SSNID}}</td>
+                    <td>{{data.Status}}</td>
+                    <td>{{data.Message}}</td>
+                    <td>{{data.LastUpdated}}</td>
+                    <td><a href={{url_for()}}>Refresh</a></td>
+                    <td><a href={{url_for()}}>View Details</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+{% endblock %}
