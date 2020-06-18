@@ -1,0 +1,51 @@
+{% extend "layout.html" %}
+{% block content %}
+
+        <div class='center'>
+            <center>
+                <br>
+                <br>
+                <br>
+                <span class='size-xl'>Account Status</span>
+                <br>
+                <br>
+                <table border="2px gray solid" class="table">
+                    <tr>
+                        <th>Customer ID</th>
+                        <th>Account ID</th>
+                        <th>Account Type</th>
+                        <th>Account Status</th>
+                        <th>Message</th>
+                        <th>Last Updated</th>
+                        <th>Operations</th>
+                    </tr>
+                    {% for data in courseData %}
+                    <tr>
+                        <td>{{data.CustID}}</td>
+                        <td>{{data.AccID}}</td>
+                        <td>{{data.AccType}}</td>
+                        <td>{{data.Status}}</td>
+                        <td>{{data.Message}}</td>
+                        <td>{{data.LastUpdated}}</td>
+                        <td><a href={{url_for()}}>Refresh</a></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                <br>
+                <br>
+                <br>
+                <button type="Submit" class="yellowTxt blackButton">Refresh the list</button>
+            </center>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+{% endblock %}
